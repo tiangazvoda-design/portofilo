@@ -171,9 +171,26 @@
       'Sporočilo:\n' + sporocilo
     );
 
-    window.location.href = 'mailto:tvoj@email.si?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:tian.gazvoda@gmail.com?subject=' + subject + '&body=' + body;
     formNote.textContent = 'Odpira se vaš e-poštni program s pripravljenim sporočilom.';
   });
+
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && revealEls.length){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
 
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
