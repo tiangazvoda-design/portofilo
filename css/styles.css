@@ -130,6 +130,25 @@ h3{ font-size: 1.15rem; }
 .btn--block{ width:100%; }
 
 /* =========================================================
+   SCROLL REVEAL
+   Elements start slightly lowered/faded and settle into place
+   as they enter the viewport (one-time, triggered by scroll).
+   ========================================================= */
+.reveal{
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.is-visible{ opacity: 1; transform: none; }
+
+.reveal-group .reveal:nth-child(1){ transition-delay: 0s; }
+.reveal-group .reveal:nth-child(2){ transition-delay: .08s; }
+.reveal-group .reveal:nth-child(3){ transition-delay: .16s; }
+.reveal-group .reveal:nth-child(4){ transition-delay: .24s; }
+.reveal-group .reveal:nth-child(5){ transition-delay: .32s; }
+.reveal-group .reveal:nth-child(6){ transition-delay: .4s; }
+
+/* =========================================================
    NAVBAR
    ========================================================= */
 .navbar{
@@ -146,7 +165,15 @@ h3{ font-size: 1.15rem; }
 .brand__name{ font-family: var(--font-display); font-weight:600; font-size:1.02rem; color: var(--ink); }
 
 .nav-links{ display:flex; align-items:center; gap: 30px; }
-.nav-links a{ font-size:0.94rem; color: var(--text-muted); transition: color .2s var(--ease); }
+.nav-links a{
+  position:relative; font-size:0.94rem; color: var(--text-muted);
+  transition: color .2s var(--ease);
+}
+.nav-links a:not(.nav-cta)::after{
+  content:""; position:absolute; left:0; right:100%; bottom:-4px; height:1.4px;
+  background: var(--copper); transition: right .25s var(--ease);
+}
+.nav-links a:not(.nav-cta):hover::after{ right:0; }
 .nav-links a:hover{ color: var(--ink); }
 .nav-cta{
   color: var(--paper) !important;
@@ -241,11 +268,14 @@ h3{ font-size: 1.15rem; }
   border-radius: var(--radius-m);
   padding: 34px 28px;
   display:flex; flex-direction:column;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
 }
+.price-card:hover{ transform: translateY(-4px); box-shadow: 0 10px 30px rgba(18,33,61,0.08); }
 .price-card--featured{
   border-color: var(--copper);
   box-shadow: 0 8px 28px rgba(18,33,61,0.08);
 }
+.price-card--featured:hover{ box-shadow: 0 14px 34px rgba(18,33,61,0.12); }
 .price-card__badge{
   font-family: var(--font-display); font-size:0.76rem; color: var(--copper);
   margin: 0 0 10px;
@@ -313,7 +343,11 @@ h3{ font-size: 1.15rem; }
 .zakaj__grid{ display:grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; align-items:start; }
 .features{ display:grid; grid-template-columns: 1fr 1fr; gap: 30px 34px; }
 .features li{ display:flex; gap:14px; align-items:flex-start; }
-.features svg{ flex-shrink:0; color: var(--copper); margin-top:2px; }
+.features svg{
+  flex-shrink:0; color: var(--copper); margin-top:2px;
+  transition: transform .3s var(--ease);
+}
+.features li:hover svg{ transform: scale(1.15) rotate(-4deg); }
 .features h3{ font-size:1rem; margin-bottom:5px; }
 .features p{ color: var(--text-muted); font-size:0.9rem; }
 
@@ -321,11 +355,19 @@ h3{ font-size: 1.15rem; }
    ABOUT
    ========================================================= */
 .about__grid{ display:grid; grid-template-columns: 0.55fr 1fr; gap: 56px; align-items:center; }
-.about__frame{
+.titleblock{
   position:relative; background: var(--paper-alt); border-radius: var(--radius-m);
-  padding: 40px; color: var(--blue-line); border: 1px solid var(--border);
+  padding: 30px 28px; border: 1px solid var(--border);
 }
-.about__frame-label{ text-align:center; font-size:0.8rem; color: var(--text-muted); margin-top:14px; }
+.titleblock__mark{ color: var(--copper); margin-bottom: 20px; }
+.titleblock__rows{ margin:0; display:flex; flex-direction:column; }
+.titleblock__rows > div{
+  display:flex; justify-content:space-between; gap: 16px;
+  padding: 12px 0; border-top: 1px solid var(--border);
+}
+.titleblock__rows > div:first-child{ border-top:none; padding-top:0; }
+.titleblock__rows dt{ font-size:0.82rem; color: var(--text-muted); }
+.titleblock__rows dd{ margin:0; font-family: var(--font-display); font-size:0.86rem; color: var(--ink); text-align:right; }
 .about__copy h2{ margin-bottom: 18px; }
 .about__copy p{ color: var(--text-muted); margin-bottom: 16px; max-width: 58ch; }
 
