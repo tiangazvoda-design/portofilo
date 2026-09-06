@@ -1,34 +1,49 @@
+
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tian Gazvoda — Izdelava spletnih strani za mala podjetja</title>
-<meta name="description" content="Izdelujem moderne, hitre in responzivne spletne strani za mala in lokalna podjetja — od obrtnikov do storitvenih dejavnosti. Pogovorimo se o vaši spletni strani.">
-<meta name="theme-color" content="#12213D">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Tian Gazvoda — Izdelava spletnih strani za mala podjetja">
-<meta property="og:description" content="Moderne spletne strani za podjetja, ki želijo izgledati profesionalno.">
-<meta property="og:type" content="website">
+  <title>Tian Gazvoda — Spletne strani za mala podjetja</title>
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+  <meta
+    name="description"
+    content="Izdelujem moderne, hitre in profesionalne spletne strani za mala in lokalna podjetja."
+  >
+
+  <meta name="theme-color" content="#0b1220">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
 <a class="skip-link" href="#main">Preskoči na vsebino</a>
 
-<!-- ===================== NAVBAR ===================== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <header class="navbar" id="navbar">
   <div class="navbar__inner container">
-    <a href="#top" class="brand">
+
+    <a href="#top" class="brand" aria-label="Tian Gazvoda">
       <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22"><rect x="1" y="1" width="22" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 12h12M12 6v12" stroke="currentColor" stroke-width="1.4"/></svg>
+        <svg viewBox="0 0 24 24">
+          <rect x="1" y="1" width="22" height="22" rx="2"/>
+          <path d="M6 12h12M12 6v12"/>
+        </svg>
       </span>
+
       <span class="brand__name">Tian Gazvoda</span>
     </a>
 
@@ -38,451 +53,919 @@
       <a href="#proces">Proces</a>
       <a href="#o-meni">O meni</a>
       <a href="#faq">FAQ</a>
-      <a href="#kontakt" class="nav-cta">Kontaktiraj me</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
     </nav>
 
     <div class="navbar__actions">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Preklopi temo">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Preklopi temo"
+      >
+        <svg class="icon-sun" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/>
+        </svg>
+
+        <svg class="icon-moon" viewBox="0 0 24 24">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/>
+        </svg>
       </button>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Odpri meni" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Odpri meni"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="top">
-    <div class="container hero__grid">
-      <div class="hero__copy">
-        <p class="tag">Freelance izdelava spletnih strani za mala podjetja</p>
-        <h1 class="hero__title">
-          Moderne spletne strani<br>za podjetja, ki želijo<br>izgledati profesionalno.
-        </h1>
-        <p class="hero__subtitle">
-          Izdelujem hitre, pregledne in responzivne spletne strani za mala in lokalna
-          podjetja — od vodovodarjev do frizerjev. Brez odvečnega žargona, s
-          spletno stranjo, ki dejansko dela svoje delo.
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero__grid">
+
+    <div class="hero__copy">
+
+      <div class="hero__eyebrow reveal">
+        <span class="status-dot"></span>
+        Na voljo za nove projekte
+      </div>
+
+      <p class="tag reveal reveal-delay-1">
+        Spletne strani za mala in lokalna podjetja
+      </p>
+
+      <h1 class="hero__title reveal reveal-delay-2">
+        Vaše podjetje.
+        <span>Boljša spletna stran.</span>
+      </h1>
+
+      <p class="hero__subtitle reveal reveal-delay-3">
+        Izdelujem hitre, moderne in profesionalne spletne strani,
+        ki obiskovalcu jasno pokažejo, kdo ste, kaj ponujate in
+        kako lahko stopi v stik z vami.
+      </p>
+
+      <div class="hero__actions reveal reveal-delay-4">
+        <a href="#projekti" class="btn btn--primary">
+          Poglej projekte
+          <span>→</span>
+        </a>
+
+        <a href="#kontakt" class="btn btn--ghost">
+          Začni projekt
+        </a>
+      </div>
+
+      <div class="hero__meta reveal reveal-delay-5">
+        <span>✓ Responsive</span>
+        <span>✓ Hiter razvoj</span>
+        <span>✓ Prilagojen dizajn</span>
+      </div>
+
+    </div>
+
+    <div class="hero__visual reveal reveal-delay-2" aria-hidden="true">
+
+      <div class="hero-orbit orbit-1"></div>
+      <div class="hero-orbit orbit-2"></div>
+
+      <div class="browser">
+        <div class="browser__top">
+          <div class="browser__dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="browser__address">
+            tian-gazvoda.si
+          </div>
+        </div>
+
+        <div class="browser__content">
+
+          <div class="browser__line browser__line--small"></div>
+          <div class="browser__line browser__line--large"></div>
+          <div class="browser__line"></div>
+
+          <div class="browser__button"></div>
+
+          <div class="browser__cards">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="floating-card floating-card--one">
+        <span class="floating-card__icon">↗</span>
+        <div>
+          <strong>Modern design</strong>
+          <small>Built for business</small>
+        </div>
+      </div>
+
+      <div class="floating-card floating-card--two">
+        <span class="floating-card__icon">✓</span>
+        <div>
+          <strong>100% responsive</strong>
+          <small>Phone · Tablet · Desktop</small>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="storitve">
+  <div class="container">
+
+    <div class="section__head reveal">
+      <span class="section-number">01 — STORITVE</span>
+
+      <h2>
+        Izberi rešitev,
+        <span>ki ustreza tvojemu podjetju.</span>
+      </h2>
+
+      <p>
+        Jasni paketi brez nepotrebnega kompliciranja.
+        Končno ceno vedno določiva glede na dejanski obseg projekta.
+      </p>
+    </div>
+
+    <div class="pricing reveal-group">
+
+      <article class="price-card reveal">
+        <div class="price-card__top">
+          <span class="price-card__number">01</span>
+          <span class="price-card__label">ZAČETEK</span>
+        </div>
+
+        <h3>Start</h3>
+
+        <p class="price-card__desc">
+          Profesionalna predstavitvena stran za podjetje,
+          ki želi dobro spletno prisotnost brez nepotrebnih funkcij.
         </p>
-        <div class="hero__actions">
-          <a href="#projekti" class="btn btn--primary">Poglej moje projekte</a>
-          <a href="#kontakt" class="btn btn--ghost">Kontaktiraj me</a>
+
+        <div class="price-card__price">
+          149<span>€</span>
         </div>
-      </div>
 
-      <div class="hero__visual" aria-hidden="true">
-        <svg id="heroSvg" viewBox="0 0 460 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- browser frame -->
-          <rect class="draw" x="20" y="20" width="420" height="300" rx="6" stroke="currentColor" stroke-width="2"/>
-          <line class="draw" x1="20" y1="58" x2="440" y2="58" stroke="currentColor" stroke-width="1.4"/>
-          <circle class="draw dot" cx="40" cy="39" r="4" stroke="currentColor" stroke-width="1.4"/>
-          <circle class="draw dot" cx="55" cy="39" r="4" stroke="currentColor" stroke-width="1.4"/>
-          <circle class="draw dot" cx="70" cy="39" r="4" stroke="currentColor" stroke-width="1.4"/>
-          <!-- hero block -->
-          <rect class="draw fill-copper" x="42" y="78" width="180" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/>
-          <rect class="draw" x="42" y="100" width="260" height="8" rx="2" stroke="currentColor" stroke-width="1.2"/>
-          <rect class="draw" x="42" y="114" width="220" height="8" rx="2" stroke="currentColor" stroke-width="1.2"/>
-          <rect class="draw" x="42" y="136" width="90" height="26" rx="4" stroke="currentColor" stroke-width="1.4"/>
-          <!-- grid of cards -->
-          <rect class="draw" x="42" y="188" width="110" height="112" rx="4" stroke="currentColor" stroke-width="1.4"/>
-          <rect class="draw" x="164" y="188" width="110" height="112" rx="4" stroke="currentColor" stroke-width="1.4"/>
-          <rect class="draw" x="286" y="188" width="132" height="112" rx="4" stroke="currentColor" stroke-width="1.4"/>
-          <rect class="draw" x="58" y="204" width="78" height="46" rx="3" stroke="currentColor" stroke-width="1.1"/>
-          <rect class="draw" x="180" y="204" width="78" height="46" rx="3" stroke="currentColor" stroke-width="1.1"/>
-          <rect class="draw" x="302" y="204" width="100" height="46" rx="3" stroke="currentColor" stroke-width="1.1"/>
-          <!-- measurement annotations -->
-          <path class="draw dim" d="M20 332 L440 332" stroke="currentColor" stroke-width="1"/>
-          <path class="draw dim" d="M20 326 L20 338" stroke="currentColor" stroke-width="1"/>
-          <path class="draw dim" d="M440 326 L440 338" stroke="currentColor" stroke-width="1"/>
-          <text class="dim-label" x="205" y="350" font-family="Space Grotesk, sans-serif" font-size="11" fill="currentColor">100% responsive</text>
-        </svg>
-      </div>
+        <ul class="price-card__list">
+          <li>Ena stran / one-page</li>
+          <li>Predstavitev podjetja</li>
+          <li>Predstavitev storitev</li>
+          <li>Kontaktni obrazec</li>
+          <li>Responsive design</li>
+          <li>Osnovna SEO nastavitev</li>
+        </ul>
+
+        <a href="#kontakt" class="btn btn--outline">
+          Povprašaj
+        </a>
+      </article>
+
+      <article class="price-card price-card--featured reveal">
+        <div class="price-card__featured">
+          Najbolj priljubljeno
+        </div>
+
+        <div class="price-card__top">
+          <span class="price-card__number">02</span>
+          <span class="price-card__label">RAST</span>
+        </div>
+
+        <h3>Business</h3>
+
+        <p class="price-card__desc">
+          Celovitejša spletna predstavitev za podjetja,
+          ki želijo več prostora za storitve, projekte in informacije.
+        </p>
+
+        <div class="price-card__price">
+          249<span>€</span>
+        </div>
+
+        <ul class="price-card__list">
+          <li>Do 4 podstrani</li>
+          <li>Galerija / portfolio</li>
+          <li>Kontaktni obrazec</li>
+          <li>Zemljevid lokacije</li>
+          <li>Optimizacija hitrosti</li>
+          <li>Dizajn po vaši blagovni znamki</li>
+        </ul>
+
+        <a href="#kontakt" class="btn btn--primary">
+          Povprašaj
+        </a>
+      </article>
+
+      <article class="price-card reveal">
+        <div class="price-card__top">
+          <span class="price-card__number">03</span>
+          <span class="price-card__label">NAPREDNO</span>
+        </div>
+
+        <h3>Pro</h3>
+
+        <p class="price-card__desc">
+          Naprednejša spletna rešitev z več podstranmi,
+          interakcijami in prostorom za dodatne funkcije.
+        </p>
+
+        <div class="price-card__price">
+          399<span>€</span>
+        </div>
+
+        <ul class="price-card__list">
+          <li>Do 8 podstrani</li>
+          <li>Napredne animacije</li>
+          <li>Interaktivni elementi</li>
+          <li>Naprednejša SEO nastavitev</li>
+          <li>Google Business / zemljevid</li>
+          <li>Možnost dodatnih funkcij</li>
+        </ul>
+
+        <a href="#kontakt" class="btn btn--outline">
+          Povprašaj
+        </a>
+      </article>
+
     </div>
-  </section>
 
-  <!-- ===================== STORITVE ===================== -->
-  <section class="section" id="storitve">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Storitve</h2>
-        <p>Trije osnovni paketi za začetek. Vsak projekt je na koncu prilagojen vašim
-          konkretnim potrebam.</p>
-      </div>
+    <p class="price-note reveal">
+      Cene so orientacijske. Končna ponudba je vedno pripravljena glede na
+      vsebino, funkcionalnosti in zahtevnost projekta.
+    </p>
 
-      <div class="pricing reveal-group">
-        <article class="price-card reveal">
-          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
-          <h3>Start</h3>
-          <p class="price-card__desc">Osnovna predstavitvena stran za mala podjetja, ki potrebujejo urejeno spletno prisotnost brez zapletov.</p>
-          <p class="price-card__price">149&nbsp;€</p>
-          <ul class="price-card__list">
-            <li>Ena stran (one-page zasnova)</li>
-            <li>Predstavitev storitev in podjetja</li>
-            <li>Kontaktni obrazec</li>
-            <li>Responsive design</li>
-            <li>Osnovna SEO nastavitev</li>
-          </ul>
-          <a href="#kontakt" class="btn btn--outline">Povprašaj</a>
-        </article>
+  </div>
+</section>
 
-        <article class="price-card price-card--featured reveal">
-          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
-          <p class="price-card__badge">Najpogosteje izbrano</p>
-          <h3>Business</h3>
-          <p class="price-card__desc">Za podjetja, ki želijo več prostora za predstavitev storitev, projektov in zaupanja strank.</p>
-          <p class="price-card__price">249&nbsp;€</p>
-          <ul class="price-card__list">
-            <li>Do 4 podstrani</li>
-            <li>Galerija / portfolio sekcija</li>
-            <li>Kontaktni obrazec + zemljevid</li>
-            <li>Osnovna optimizacija hitrosti</li>
-            <li>Dizajn, prilagojen vaši blagovni znamki</li>
-          </ul>
-          <a href="#kontakt" class="btn btn--primary">Povprašaj</a>
-        </article>
+<!-- PROJECTS -->
+<section class="section section--alt" id="projekti">
+  <div class="container">
 
-        <article class="price-card reveal">
-          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
-          <h3>Pro</h3>
-          <p class="price-card__desc">Popolna rešitev za podjetja, ki želijo izstopati in imeti prostor za rast.</p>
-          <p class="price-card__price">399&nbsp;€</p>
-          <ul class="price-card__list">
-            <li>Do 8 podstrani</li>
-            <li>Animacije in interaktivni elementi</li>
-            <li>Napredna SEO nastavitev</li>
-            <li>Povezava z Google Business / zemljevidom</li>
-            <li>Prostor za dodatne funkcije (npr. rezervacije)</li>
-          </ul>
-          <a href="#kontakt" class="btn btn--outline">Povprašaj</a>
-        </article>
-      </div>
-      <p class="price-note">Cene so orientacijske. Končna cena se prilagodi glede na obseg in zahteve konkretnega projekta.</p>
+    <div class="section__head reveal">
+      <span class="section-number">02 — PROJEKTI</span>
+
+      <h2>
+        Koncepti, ki pokažejo
+        <span>kaj lahko naredim.</span>
+      </h2>
+
+      <p>
+        Trenutno gradim svoj portfolio. Zato so spodnji projekti
+        konceptne predstavitve, izdelane za različne tipe podjetij.
+      </p>
     </div>
-  </section>
 
-  <!-- ===================== PROJEKTI ===================== -->
-  <section class="section section--alt" id="projekti">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Projekti</h2>
-        <p>Ker šele gradim svoj portfolio dejanskih strank, so spodnji trije primeri
-          <strong>konceptni / demo projekti</strong> — narejeni, da pokažejo, kako bi
-          izgledala prava stran za tovrstno dejavnost.</p>
-      </div>
+    <div class="projects reveal-group">
 
-      <div class="projects reveal-group" id="projectsGrid">
+      <article class="project-card reveal" data-project="vodovod">
 
-        <article class="project-card reveal" data-project="vodovod">
-          <div class="project-card__thumb" data-thumb="vodovod" aria-hidden="true">
-            <svg viewBox="0 0 200 140"><rect width="200" height="140" fill="none"/>
-              <path d="M20 100h30v-40h40v-30h30v70h60" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="20" cy="100" r="4" fill="currentColor"/>
-              <circle cx="180" cy="100" r="4" fill="currentColor"/>
-              <path d="M70 30v-14M60 20h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+        <div class="project-card__visual project-card__visual--blue">
+          <div class="mini-browser">
+            <div class="mini-browser__top">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mini-content">
+              <div></div>
+              <div></div>
+              <div class="mini-content__button"></div>
+            </div>
           </div>
-          <div class="project-card__body">
-            <span class="project-card__badge">Koncept / Demo</span>
-            <p class="project-card__cat">Vodovodno podjetje</p>
-            <h3>Vodovod Kern — koncept</h3>
-            <p>Predstavitvena stran za vodovodno podjetje: storitve, nujni klic 0–24 in preprost obrazec za povpraševanje.</p>
-            <button class="btn btn--text" data-open-project="vodovod">Poglej projekt</button>
-          </div>
-        </article>
 
-        <article class="project-card reveal" data-project="avtomehanik">
-          <div class="project-card__thumb" data-thumb="avtomehanik" aria-hidden="true">
-            <svg viewBox="0 0 200 140"><rect width="200" height="140" fill="none"/>
-              <path d="M40 95l10-25a10 10 0 0 1 9-6h42a10 10 0 0 1 9 6l10 25" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/>
-              <path d="M35 95h130v18H35z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <circle cx="65" cy="113" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
-              <circle cx="135" cy="113" r="10" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M85 70h30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge">Koncept / Demo</span>
-            <p class="project-card__cat">Avtomehanična delavnica</p>
-            <h3>Avto Servis Rok — koncept</h3>
-            <p>Stran za avtomehanično delavnico s cenikom osnovnih storitev, naročilom termina in lokacijo na zemljevidu.</p>
-            <button class="btn btn--text" data-open-project="avtomehanik">Poglej projekt</button>
-          </div>
-        </article>
+          <span class="project-index">01</span>
+        </div>
 
-        <article class="project-card reveal" data-project="mizarstvo">
-          <div class="project-card__thumb" data-thumb="mizarstvo" aria-hidden="true">
-            <svg viewBox="0 0 200 140"><rect width="200" height="140" fill="none"/>
-              <path d="M30 50h140v14H30z" stroke="currentColor" stroke-width="3" fill="none"/>
-              <path d="M45 64v40M155 64v40" stroke="currentColor" stroke-width="3"/>
-              <path d="M35 104h130" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              <path d="M60 50l10-20M140 50l-10-20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="project-card__body">
-            <span class="project-card__badge">Koncept / Demo</span>
-            <p class="project-card__cat">Mizarstvo</p>
-            <h3>Mizarstvo Novak — koncept</h3>
-            <p>Portfolio stran za mizarstvo z galerijo izdelkov po meri in obrazcem za povpraševanje po projektu.</p>
-            <button class="btn btn--text" data-open-project="mizarstvo">Poglej projekt</button>
-          </div>
-        </article>
+        <div class="project-card__body">
+          <span class="project-card__badge">KONCEPT / DEMO</span>
+          <span class="project-card__cat">Vodovodno podjetje</span>
 
-      </div>
+          <h3>Vodovod Kern</h3>
+
+          <p>
+            Jasna predstavitvena stran z nujnim kontaktom,
+            storitvami in hitrim povpraševanjem.
+          </p>
+
+          <button class="project-link" data-open-project="vodovod">
+            Poglej projekt <span>↗</span>
+          </button>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-project="avtomehanik">
+
+        <div class="project-card__visual project-card__visual--dark">
+          <div class="mini-car">
+            <div class="car-body"></div>
+            <div class="car-wheel car-wheel--one"></div>
+            <div class="car-wheel car-wheel--two"></div>
+          </div>
+
+          <span class="project-index">02</span>
+        </div>
+
+        <div class="project-card__body">
+          <span class="project-card__badge">KONCEPT / DEMO</span>
+          <span class="project-card__cat">Avtomehanična delavnica</span>
+
+          <h3>Avto Servis Rok</h3>
+
+          <p>
+            Sodobna stran za servis z naročanjem termina,
+            storitvami in jasnimi kontaktnimi informacijami.
+          </p>
+
+          <button class="project-link" data-open-project="avtomehanik">
+            Poglej projekt <span>↗</span>
+          </button>
+        </div>
+
+      </article>
+
+      <article class="project-card reveal" data-project="mizarstvo">
+
+        <div class="project-card__visual project-card__visual--warm">
+          <div class="wood-shape">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <span class="project-index">03</span>
+        </div>
+
+        <div class="project-card__body">
+          <span class="project-card__badge">KONCEPT / DEMO</span>
+          <span class="project-card__cat">Mizarstvo</span>
+
+          <h3>Mizarstvo Novak</h3>
+
+          <p>
+            Vizualno umirjen portfolio za predstavitev izdelkov,
+            materialov in projektov po meri.
+          </p>
+
+          <button class="project-link" data-open-project="mizarstvo">
+            Poglej projekt <span>↗</span>
+          </button>
+        </div>
+
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== PROCESS ===================== -->
-  <section class="section" id="proces">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2>Proces</h2>
-        <p>Preprost, pregleden proces — vedno veste, v kateri fazi je vaš projekt.</p>
-      </div>
+<!-- PROCESS -->
+<section class="section" id="proces">
+  <div class="container">
 
-      <ol class="process reveal-group">
-        <li class="process__step reveal">
-          <span class="process__num">01</span>
-          <h3>Pogovor</h3>
-          <p>Spoznamo se, poveste mi, kaj potrebujete in kakšni so cilji vaše strani.</p>
-        </li>
-        <li class="process__step reveal">
-          <span class="process__num">02</span>
-          <h3>Načrt</h3>
-          <p>Pripravim strukturo strani in predlog dizajna, prilagojen vaši dejavnosti.</p>
-        </li>
-        <li class="process__step reveal">
-          <span class="process__num">03</span>
-          <h3>Izdelava</h3>
-          <p>Stran zgradim s programiranjem in sodobnimi orodji, korak za korakom.</p>
-        </li>
-        <li class="process__step reveal">
-          <span class="process__num">04</span>
-          <h3>Pregled</h3>
-          <p>Skupaj pregledava stran in popravim, kar je treba, dokler nisva zadovoljna.</p>
-        </li>
-        <li class="process__step reveal">
-          <span class="process__num">05</span>
-          <h3>Objava</h3>
-          <p>Stran objavim na internetu in poskrbim, da vse deluje, kot mora.</p>
-        </li>
-      </ol>
+    <div class="section__head reveal">
+      <span class="section-number">03 — PROCES</span>
+
+      <h2>
+        Od ideje do
+        <span>objavljene strani.</span>
+      </h2>
+
+      <p>
+        Preprost proces brez nepotrebnega tehničnega žargona.
+      </p>
     </div>
-  </section>
 
-  <!-- ===================== ZAKAJ JAZ ===================== -->
-  <section class="section section--alt" id="zakaj">
-    <div class="container zakaj__grid">
+    <ol class="process reveal-group">
+
+      <li class="process__step reveal">
+        <span class="process__number">01</span>
+        <div class="process__line"></div>
+        <h3>Pogovor</h3>
+        <p>
+          Poveš mi, kaj potrebuješ, komu je stran namenjena
+          in kaj želiš z njo doseči.
+        </p>
+      </li>
+
+      <li class="process__step reveal">
+        <span class="process__number">02</span>
+        <div class="process__line"></div>
+        <h3>Načrt</h3>
+        <p>
+          Določiva strukturo, vsebino, izgled in funkcionalnosti strani.
+        </p>
+      </li>
+
+      <li class="process__step reveal">
+        <span class="process__number">03</span>
+        <div class="process__line"></div>
+        <h3>Izdelava</h3>
+        <p>
+          Stran razvijem, animiram in prilagodim za telefone,
+          tablice in računalnike.
+        </p>
+      </li>
+
+      <li class="process__step reveal">
+        <span class="process__number">04</span>
+        <div class="process__line"></div>
+        <h3>Pregled</h3>
+        <p>
+          Skupaj pregledava končni rezultat in uredim potrebne popravke.
+        </p>
+      </li>
+
+      <li class="process__step reveal">
+        <span class="process__number">05</span>
+        <div class="process__line"></div>
+        <h3>Objava</h3>
+        <p>
+          Stran objavim in preverim, da vse deluje tako,
+          kot mora.
+        </p>
+      </li>
+
+    </ol>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section section--alt" id="zakaj">
+  <div class="container">
+
+    <div class="why-layout">
+
       <div class="section__head section__head--left reveal">
-        <h2>Zakaj jaz</h2>
-        <p>Nekaj razlogov, zakaj se splača povprašati.</p>
+        <span class="section-number">04 — ZAKAJ JAZ</span>
+
+        <h2>
+          Spletna stran naj
+          <span>nekaj doseže.</span>
+        </h2>
+
+        <p>
+          Lep izgled je pomemben. Še pomembneje pa je,
+          da obiskovalec hitro razume vaše podjetje in ve,
+          kaj naj naredi naprej.
+        </p>
       </div>
 
-      <ul class="features reveal-group">
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
-          <div><h3>Moderen dizajn</h3><p>Strani, ki izgledajo sveže in aktualno — ne kot predloga iz leta 2015.</p></div>
-        </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
-          <div><h3>Responsive na vseh napravah</h3><p>Od telefona do velikega monitorja — stran deluje povsod enako dobro.</p></div>
-        </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div><h3>Hitro delo</h3><p>Brez mesecev čakanja na preprosto spletno stran.</p></div>
-        </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12l6 6L20 6"/></svg>
-          <div><h3>Prilagojen pristop</h3><p>Vsaka stran je zgrajena za vašo dejavnost, ne iz vnaprej narejene predloge.</p></div>
-        </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 1 1-4-7.2M21 4v6h-6"/></svg>
-          <div><h3>Jasna komunikacija</h3><p>Brez tehničnega žargona — vedno veste, kje v procesu se nahaja vaš projekt.</p></div>
-        </li>
-        <li class="reveal">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          <div><h3>Ugodnejša rešitev</h3><p>Cena, prilagojena manjšim in lokalnim podjetjem.</p></div>
-        </li>
-      </ul>
+      <div class="features reveal-group">
+
+        <article class="feature reveal">
+          <span class="feature__number">01</span>
+          <div>
+            <h3>Moderen izgled</h3>
+            <p>
+              Čist, sodoben dizajn brez občutka zastarele predloge.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__number">02</span>
+          <div>
+            <h3>Responsive</h3>
+            <p>
+              Stran je prilagojena telefonu, tablici in računalniku.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__number">03</span>
+          <div>
+            <h3>Hitro nalaganje</h3>
+            <p>
+              Brez nepotrebne navlake, ki upočasnjuje uporabniško izkušnjo.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__number">04</span>
+          <div>
+            <h3>Jasna komunikacija</h3>
+            <p>
+              Brez tehničnega žargona. Veš, kaj se dogaja z vašim projektom.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__number">05</span>
+          <div>
+            <h3>Prilagojen pristop</h3>
+            <p>
+              Stran prilagodim vašemu podjetju, ne obratno.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature__number">06</span>
+          <div>
+            <h3>Prostor za rast</h3>
+            <p>
+              Kasneje je mogoče dodati nove sekcije in funkcionalnosti.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== O MENI ===================== -->
-  <section class="section" id="o-meni">
-    <div class="container about__grid">
-      <div class="about__visual reveal" aria-hidden="true">
-        <div class="titleblock">
-          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
-          <svg class="titleblock__mark" viewBox="0 0 24 24" width="26" height="26"><rect x="1" y="1" width="22" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 12h12M12 6v12" stroke="currentColor" stroke-width="1.4"/></svg>
-          <dl class="titleblock__rows">
-            <div><dt>Izdelovalec</dt><dd>Tian Gazvoda</dd></div>
-            <div><dt>Lokacija</dt><dd>Slovenija</dd></div>
-            <div><dt>Fokus</dt><dd>Mala in lokalna podjetja</dd></div>
-            <div><dt>Orodja</dt><dd>Programiranje + AI</dd></div>
-            <div><dt>Status</dt><dd>Sprejemam nove projekte</dd></div>
-          </dl>
+<!-- ABOUT -->
+<section class="section" id="o-meni">
+  <div class="container about__grid">
+
+    <div class="about-card reveal">
+
+      <div class="about-card__top">
+        <span>PROFILE / 001</span>
+        <span>SI</span>
+      </div>
+
+      <div class="about-card__symbol">
+        TG
+      </div>
+
+      <div class="about-card__name">
+        Tian Gazvoda
+      </div>
+
+      <div class="about-card__role">
+        Web developer
+      </div>
+
+      <div class="about-card__stats">
+        <div>
+          <span>FOCUS</span>
+          <strong>Web</strong>
+        </div>
+
+        <div>
+          <span>LOCATION</span>
+          <strong>Slovenia</strong>
+        </div>
+
+        <div>
+          <span>STATUS</span>
+          <strong>Available</strong>
         </div>
       </div>
-      <div class="about__copy reveal">
-        <p class="tag">O meni</p>
-        <h2>Sem Tian Gazvoda</h2>
-        <p>Mlad razvijalec spletnih strani iz Slovenije. Izdelavo spletnih strani in
-          programiranje jemljem kot pot, na kateri se še vedno intenzivno učim in
-          izpopolnjujem — pri delu kombiniram klasično programiranje s sodobnimi AI
-          orodji, kar mi omogoča hitrejšo in bolj premišljeno izdelavo strani.</p>
-        <p>Najraje delam z manjšimi, lokalnimi podjetji — obrtniki, mojstri in
-          storitvenimi dejavnostmi — ki pogosto nimajo časa ali znanja za urejanje
-          spletne strani, imajo pa vso pravico, da na spletu izgledajo tako
-          profesionalno, kot je profesionalno njihovo delo. Vsak projekt vzamem
-          resno, ne glede na velikost, komunikacija skozi ves proces pa ostaja
-          preprosta in jasna.</p>
-      </div>
+
     </div>
-  </section>
 
-  <!-- ===================== FAQ ===================== -->
-  <section class="section section--alt" id="faq">
-    <div class="container container--narrow">
-      <div class="section__head reveal">
-        <h2>Pogosta vprašanja</h2>
-      </div>
+    <div class="about__copy reveal">
 
-      <div class="accordion reveal-group" id="accordion">
-        <div class="accordion__item reveal">
-          <button class="accordion__trigger" aria-expanded="false">
-            <span>Koliko stane spletna stran?</span>
-            <span class="accordion__icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion__panel">
-            <p>Cena je odvisna od obsega projekta. Osnovni paketi se gibljejo med
-              149&nbsp;€ in 399&nbsp;€, končna cena pa se prilagodi glede na vaše
-              konkretne potrebe.</p>
-          </div>
-        </div>
-        <div class="accordion__item reveal">
-          <button class="accordion__trigger" aria-expanded="false">
-            <span>Koliko časa traja izdelava?</span>
-            <span class="accordion__icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion__panel">
-            <p>Odvisno od paketa in obsega — enostavnejša stran je lahko pripravljena
-              v nekaj dneh, obsežnejši projekti pa zahtevajo nekoliko več časa.
-              Časovnico vedno uskladiva vnaprej.</p>
-          </div>
-        </div>
-        <div class="accordion__item reveal">
-          <button class="accordion__trigger" aria-expanded="false">
-            <span>Ali je stran prilagojena telefonu?</span>
-            <span class="accordion__icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion__panel">
-            <p>Da. Vse strani, ki jih izdelam, so v celoti responsive in delujejo
-              enako dobro na telefonu, tablici in računalniku.</p>
-          </div>
-        </div>
-        <div class="accordion__item reveal">
-          <button class="accordion__trigger" aria-expanded="false">
-            <span>Ali lahko kasneje dodam nove funkcije?</span>
-            <span class="accordion__icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion__panel">
-            <p>Da, strani so zgrajene tako, da jih je mogoče kasneje nadgraditi z
-              novimi sekcijami ali funkcionalnostmi.</p>
-          </div>
-        </div>
-        <div class="accordion__item reveal">
-          <button class="accordion__trigger" aria-expanded="false">
-            <span>Kako poteka sodelovanje?</span>
-            <span class="accordion__icon" aria-hidden="true"></span>
-          </button>
-          <div class="accordion__panel">
-            <p>Začnemo s kratkim pogovorom o vaših potrebah, nato pripravim predlog
-              in strukturo, stran izdelam, jo skupaj pregledava in na koncu objavim
-              na internetu.</p>
-          </div>
-        </div>
-      </div>
+      <span class="section-number">05 — O MENI</span>
+
+      <h2>
+        Sem Tian.
+        <span>Gradim stvari za splet.</span>
+      </h2>
+
+      <p>
+        Sem mlad razvijalec spletnih strani iz Slovenije.
+        Programiranje me zanima predvsem zato, ker lahko iz ideje
+        naredim nekaj, kar ljudje dejansko uporabljajo.
+      </p>
+
+      <p>
+        Trenutno se osredotočam na izdelavo modernih spletnih strani
+        za mala in lokalna podjetja. Pri delu kombiniram programiranje,
+        oblikovanje in sodobna AI orodja, da lahko idejo hitro
+        spremenim v konkreten rezultat.
+      </p>
+
+      <p>
+        Moj cilj ni izdelati samo še ene spletne strani.
+        Želim ustvariti stran, na katero je podjetje lahko ponosno
+        in ki obiskovalcu olajša naslednji korak.
+      </p>
+
     </div>
-  </section>
 
-  <!-- ===================== KONTAKT ===================== -->
-  <section class="section contact" id="kontakt">
-    <div class="container contact__grid">
-      <div class="contact__intro reveal">
-        <p class="tag">Kontakt</p>
-        <h2>Imate podjetje, ki potrebuje boljšo spletno stran?</h2>
-        <p>Napišite mi nekaj besed o vašem podjetju in kaj potrebujete — odgovorim
-          vam v najkrajšem možnem času.</p>
-        <a class="contact__email" href="mailto:tian.gazvoda@gmail.com">tian.gazvoda@gmail.com</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt" id="faq">
+  <div class="container container--narrow">
+
+    <div class="section__head reveal">
+      <span class="section-number">06 — FAQ</span>
+
+      <h2>
+        Pogosta
+        <span>vprašanja.</span>
+      </h2>
+    </div>
+
+    <div class="accordion reveal-group">
+
+      <div class="accordion__item reveal">
+        <button class="accordion__trigger" aria-expanded="false">
+          <span>Koliko stane spletna stran?</span>
+          <span class="accordion__icon"></span>
+        </button>
+
+        <div class="accordion__panel">
+          <p>
+            Osnovni paketi se začnejo pri 149 € in segajo do 399 €.
+            Končna cena je odvisna od obsega, vsebine in funkcionalnosti
+            konkretnega projekta.
+          </p>
+        </div>
       </div>
 
-      <form class="contact__form reveal" id="contactForm" novalidate>
-        <div class="field">
-          <label for="ime">Ime</label>
-          <input type="text" id="ime" name="ime" required autocomplete="name">
+      <div class="accordion__item reveal">
+        <button class="accordion__trigger" aria-expanded="false">
+          <span>Koliko časa traja izdelava?</span>
+          <span class="accordion__icon"></span>
+        </button>
+
+        <div class="accordion__panel">
+          <p>
+            Preproste spletne strani so lahko pripravljene v nekaj dneh.
+            Pri večjih projektih se čas izdelave določi glede na obseg
+            in zahtevnost.
+          </p>
         </div>
-        <div class="field">
-          <label for="podjetje">Podjetje</label>
-          <input type="text" id="podjetje" name="podjetje" autocomplete="organization">
+      </div>
+
+      <div class="accordion__item reveal">
+        <button class="accordion__trigger" aria-expanded="false">
+          <span>Ali stran deluje na telefonu?</span>
+          <span class="accordion__icon"></span>
+        </button>
+
+        <div class="accordion__panel">
+          <p>
+            Da. Strani so izdelane responsive, zato se prilagodijo
+            telefonu, tablici in računalniku.
+          </p>
         </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <div class="accordion__item reveal">
+        <button class="accordion__trigger" aria-expanded="false">
+          <span>Ali lahko kasneje dodam funkcije?</span>
+          <span class="accordion__icon"></span>
+        </button>
+
+        <div class="accordion__panel">
+          <p>
+            Da. Stran je mogoče kasneje razširiti z novimi sekcijami,
+            podstranmi ali funkcionalnostmi.
+          </p>
         </div>
-        <div class="field">
-          <label for="sporocilo">Kaj potrebujete?</label>
-          <textarea id="sporocilo" name="sporocilo" rows="4" required></textarea>
+      </div>
+
+      <div class="accordion__item reveal">
+        <button class="accordion__trigger" aria-expanded="false">
+          <span>Kako poteka sodelovanje?</span>
+          <span class="accordion__icon"></span>
+        </button>
+
+        <div class="accordion__panel">
+          <p>
+            Najprej mi pošlješ povpraševanje. Nato se pogovoriva o projektu,
+            določiva obseg in časovnico, izdelam stran, jo pregledava
+            in jo nato objavim.
+          </p>
         </div>
-        <button type="submit" class="btn btn--primary btn--block">Pošlji povpraševanje</button>
-        <p class="field__note" id="formNote" role="status"></p>
-      </form>
+      </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="kontakt">
+  <div class="container contact__grid">
+
+    <div class="contact__intro reveal">
+
+      <span class="section-number">07 — KONTAKT</span>
+
+      <h2>
+        Imaš projekt?
+        <span>Povej mi o njem.</span>
+      </h2>
+
+      <p>
+        Opiši mi svoje podjetje, kaj potrebuješ in približno kakšno
+        spletno stran si predstavljaš. Odgovorim čim prej.
+      </p>
+
+      <div class="contact__direct">
+        <span>Email</span>
+        <a href="mailto:tian.gazvoda@gmail.com">
+          tian.gazvoda@gmail.com
+        </a>
+      </div>
+
+    </div>
+
+    <form
+      class="contact__form reveal"
+      id="contactForm"
+      action="https://formsubmit.co/ajax/tian.gazvoda@gmail.com"
+      method="POST"
+    >
+
+      <input type="hidden" name="_subject" value="Novo povpraševanje za spletno stran">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <!-- Honeypot -->
+      <input
+        type="text"
+        name="_honey"
+        class="honeypot"
+        tabindex="-1"
+        autocomplete="off"
+      >
+
+      <div class="form__heading">
+        <span>START A PROJECT</span>
+        <span>01 / 01</span>
+      </div>
+
+      <div class="field">
+        <label for="ime">Ime *</label>
+        <input
+          type="text"
+          id="ime"
+          name="ime"
+          placeholder="Tvoje ime"
+          required
+          autocomplete="name"
+        >
+      </div>
+
+      <div class="field">
+        <label for="podjetje">Podjetje</label>
+        <input
+          type="text"
+          id="podjetje"
+          name="podjetje"
+          placeholder="Ime podjetja"
+          autocomplete="organization"
+        >
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="ime@podjetje.si"
+          required
+          autocomplete="email"
+        >
+      </div>
+
+      <div class="field">
+        <label for="sporocilo">Kaj potrebuješ? *</label>
+        <textarea
+          id="sporocilo"
+          name="sporocilo"
+          rows="5"
+          placeholder="Na kratko opiši projekt..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--submit">
+        <span>Pošlji povpraševanje</span>
+        <span class="submit-arrow">→</span>
+      </button>
+
+      <p class="field__note" id="formNote" role="status"></p>
+
+    </form>
+
+  </div>
+</section>
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="footer">
   <div class="container footer__inner">
+
     <a href="#top" class="brand brand--footer">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="20" height="20"><rect x="1" y="1" width="22" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 12h12M12 6v12" stroke="currentColor" stroke-width="1.4"/></svg>
+      <span class="brand__mark">
+        <svg viewBox="0 0 24 24">
+          <rect x="1" y="1" width="22" height="22" rx="2"/>
+          <path d="M6 12h12M12 6v12"/>
+        </svg>
       </span>
+
       <span class="brand__name">Tian Gazvoda</span>
     </a>
-    <nav class="footer__links" aria-label="Nožna navigacija">
+
+    <nav class="footer__links">
       <a href="#storitve">Storitve</a>
       <a href="#projekti">Projekti</a>
       <a href="#o-meni">O meni</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
+
     <div class="footer__meta">
-      <p><a href="mailto:tian.gazvoda@gmail.com">tian.gazvoda@gmail.com</a></p>
-      <p>© <span id="year"></span> Tian Gazvoda. Vse pravice pridržane.</p>
+      <a href="mailto:tian.gazvoda@gmail.com">
+        tian.gazvoda@gmail.com
+      </a>
+
+      <span>
+        © <span id="year"></span> Tian Gazvoda
+      </span>
     </div>
+
   </div>
 </footer>
 
-<!-- ===================== PROJECT MODAL ===================== -->
-<div class="modal" id="projectModal" aria-hidden="true">
+<!-- PROJECT MODAL -->
+<div
+  class="modal"
+  id="projectModal"
+  aria-hidden="true"
+>
   <div class="modal__overlay" data-close-modal></div>
-  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="modal__close" type="button" data-close-modal aria-label="Zapri">&times;</button>
-    <span class="project-card__badge">Koncept / Demo projekt</span>
+
+  <div
+    class="modal__dialog"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+
+    <button
+      class="modal__close"
+      type="button"
+      data-close-modal
+      aria-label="Zapri"
+    >
+      ×
+    </button>
+
+    <span class="project-card__badge">
+      KONCEPT / DEMO
+    </span>
+
+    <span id="modalCategory" class="modal__category"></span>
+
     <h3 id="modalTitle"></h3>
-    <p id="modalCategory" class="project-card__cat"></p>
-    <p id="modalDesc"></p>
+
+    <p id="modalDesc" class="modal__desc"></p>
+
     <div class="modal__block">
-      <p class="modal__label">Kaj bi taka stran vključevala</p>
+      <span class="modal__label">
+        Kaj bi taka stran vključevala
+      </span>
+
       <ul id="modalFeatures"></ul>
     </div>
-    <p class="modal__disclaimer">To je konceptna predstavitev, ne stran obstoječe stranke.</p>
+
+    <p class="modal__disclaimer">
+      Konceptna predstavitev — ne gre za dejansko spletno stran obstoječe stranke.
+    </p>
+
   </div>
 </div>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>
+
